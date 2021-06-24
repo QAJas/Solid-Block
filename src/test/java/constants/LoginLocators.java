@@ -3,7 +3,7 @@ package constants;
 public class LoginLocators {
     public static final String EMAIL_FIELD = "#auth-email";
     public static final String PASSWORD_FIELD = "#auth-password";
-    public static final String NEXT = "body > div#root:nth-child(3) > main > div.signup-auth-page-container:nth-child(2) > div.signup-auth-page:nth-child(2) > div.signup-auth-page-content:nth-child(2) > div.signin-page-form:nth-child(3) > div.form-buttons:nth-child(3) > button";
+    public static final String NEXT = "button.MuiButtonBase-root.MuiButton-root.MuiButton-text.auth-next-button.desktop";
     public static final String WARNING_MESSAGE = ".input-error:nth-child(3)";
     public static final String FIRSTNAME = "#auth-name";
     public static final String LASTNAME = "#auth-lastname";

@@ -22,6 +22,10 @@ public class Generators {
         String numb = RandomStringUtils.randomNumeric(3);
         return (numb);
     }
+    public static String Name () {
+        String name = RandomStringUtils.randomAlphabetic(5);
+        return (name);
+    }
 
     public static String generateMail() {
         return String.format("sb.qa.test21+" + Num() + "@gmail.com");
@@ -33,7 +37,7 @@ public class Generators {
     }
 
     public static String randomeNum() {
-        String generatedString = RandomStringUtils.randomNumeric(8);
+        String generatedString = RandomStringUtils.randomNumeric(5);
         return (generatedString);
     }
 
