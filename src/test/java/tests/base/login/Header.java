@@ -10,7 +10,7 @@ import tests.base.BaseTest;
 
 
 public class Header extends BaseTest {
-    @Test(groups = { "header"})
+    @Test(groups = {"links", "header"})
     public void tm() {
         driver.get(HomePageLocators.HOME_URL);
         WaitFor.WaitFori(driver, HomePageLocators.TEAM_HEADER).click();
