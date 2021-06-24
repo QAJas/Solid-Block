@@ -3,7 +3,7 @@ package tests.base.login;
 
 
 import constants.HomePageLocators;
-import helpers.WaitFor;
+import helpers.WaitFor ;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.base.BaseTest;
