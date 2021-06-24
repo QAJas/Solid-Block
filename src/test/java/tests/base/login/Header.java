@@ -8,7 +8,6 @@ import org.testng.Assert ;
 import org.testng.annotations.Test;
 import tests.base.BaseTest;
 
-
 public class Header extends BaseTest {
     @Test(groups = {"links", "header"})
     public void tm() {
