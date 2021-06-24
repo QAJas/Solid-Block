@@ -1,7 +1,4 @@
 package tests.base.login;
-
-
-
 import constants.HomePageLocators;
 import helpers.WaitFor ;
 import org.testng.Assert ;
