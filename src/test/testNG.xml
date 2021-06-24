@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name = "Parallel Testing Suite">
+    <test name = "test" ></test>
+    <parameter name="browser" value="chrome" /><test name="tests">
+
+        <classes>
+            <class name="tests.base.signUp.SignUp"></class>
+
+
+        </classes>
+
+
+</test>
+
+
+</suite>
