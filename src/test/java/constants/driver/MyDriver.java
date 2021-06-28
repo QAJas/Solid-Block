@@ -14,10 +14,10 @@ public class MyDriver {
         switch (browser) {
             case "chrome":
                 WebDriverManager.chromedriver().setup();
-               driver = new ChromeDriver();
-//                ChromeOptions options = new ChromeOptions();
-//                options.addArguments("--headless");
-//                driver = new ChromeDriver(options);
+               // driver = new ChromeDriver();
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--headless");
+                driver = new ChromeDriver(options);
 
 
                 break;
