@@ -19,8 +19,8 @@ public class WaitFor {
 //
 //    public static WebElement WaitFori (WebDriver driver, String locator){
 //        Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
-//                .withTimeout(Duration.ofSeconds(30))
-//                .pollingEvery(Duration.ofSeconds(5))
+//                .withTimeout(Duration.ofSeconds(60))
+//                .pollingEvery(Duration.ofSeconds(1))
 //                .ignoring(NoSuchElementException.class);
 //
 //        WebElement element = wait.until(new Function<WebDriver, WebElement>() {
