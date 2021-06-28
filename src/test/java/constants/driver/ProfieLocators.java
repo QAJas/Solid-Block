@@ -13,4 +13,8 @@ public class ProfieLocators {
     public static final String ZIP_CODE = "#zipCode";
     public static final String US_DROP_DOWN = "#country-select-demo-option-0";
     public static final String PROFILE_SAVE = "button.security-button";
+    public static final String DELETE_PHOTO = "button.MuiButtonBase-root.MuiButton-root.MuiButton-text.jss12.button-change-photo:nth-child(3) > span.MuiButton-label";
+    public static final String CHANGE_PHOTO = "button:nth-child(1) > span.MuiButton-label";
+    public static final String DELETE_USER = "button.MuiButtonBase-root.MuiButton-root.MuiButton-text.jss2.button-delete-profile > span.MuiButton-label";
+
 }

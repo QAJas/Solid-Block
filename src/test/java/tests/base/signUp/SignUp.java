@@ -17,6 +17,7 @@ public class SignUp extends BaseTest {
         WaitFor.WaitFori(driver, HomePageLocators.GET_STARTED).click();
         WaitFor.WaitFori(driver, LoginLocators.EMAIL_FIELD).sendKeys(Generators.generateMail());
         driver.findElement(By.cssSelector(LoginLocators.PASSWORD_FIELD)).sendKeys(Generators.randomeNum());
+        WaitFor.WaitFori(driver, LoginLocators.NEXT).isSelected();
         driver.findElement(By.cssSelector(LoginLocators.NEXT)).click();
         WaitFor.WaitFori(driver, LoginLocators.FIRSTNAME).sendKeys(Generators.getUniqueId());
         driver.findElement(By.cssSelector(LoginLocators.LASTNAME)).sendKeys(Generators.getUniqueId());

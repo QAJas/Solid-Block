@@ -2,8 +2,12 @@
 
 <suite name="Suite1" verbose="1" >
     <test name="Regression1"   >
-        <packages>
-            <package name="tests.base.profile" />
-        </packages>
+        <classes>
+            <class name="tests.base.profile.ChangeDataInProfile"></class>
+            <class name="tests.base.signUp.SignUp"></class>
+            <class name="tests.base.login.Lg"></class>
+            <class name="tests.base.login.Footer"></class>
+            <class name="tests.base.login.Header"></class>
+        </classes>
     </test>
 </suite>

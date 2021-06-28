@@ -14,14 +14,13 @@ public class BaseTest {
     public static WebDriver driver;
 
 
-
-    @BeforeSuite(alwaysRun = true)
-    public static void max(){
+    @BeforeClass(alwaysRun = true)
+    public static void max() {
         driver.manage().window().maximize();
     }
 
 
-    @BeforeSuite(alwaysRun = true)
+    @BeforeClass(alwaysRun = true)
 //   @Parameters({"browser"})
     public static void createDriver() {
         driver = MyDriver.createDriver("chrome");
@@ -29,21 +28,20 @@ public class BaseTest {
 
     }
 
-    @AfterSuite(alwaysRun = true)
+    @AfterClass(alwaysRun = true)
     public static void driverQuit() {
         driver.quit();
     }
 
-
-
-@BeforeMethod
-public static void login(){
-    driver.get(HomePageLocators.HOME_URL);
-    WaitFor.WaitFori(driver, HomePageLocators.LOGIN);
-    driver.findElement(By.cssSelector(HomePageLocators.LOGIN)).click();
-    WaitFor.WaitFori(driver, LoginLocators.EMAIL_FIELD);
-    driver.findElement(By.cssSelector(LoginLocators.EMAIL_FIELD)).sendKeys("tcohasmik+7@gmail.com");
-    driver.findElement(By.cssSelector(LoginLocators.PASSWORD_FIELD)).sendKeys("654654654");
-    WaitFor.WaitFori(driver, LoginLocators.NEXT);
-    driver.findElement(By.cssSelector(LoginLocators.NEXT)).click();
-}}
+}
+//@BeforeMethod
+//public static void login(){
+//    driver.get(HomePageLocators.HOME_URL);
+//    WaitFor.WaitFori(driver, HomePageLocators.LOGIN);
+//    driver.findElement(By.cssSelector(HomePageLocators.LOGIN)).click();
+//    WaitFor.WaitFori(driver, LoginLocators.EMAIL_FIELD);
+//    driver.findElement(By.cssSelector(LoginLocators.EMAIL_FIELD)).sendKeys("tcohasmik+7@gmail.com");
+//    driver.findElement(By.cssSelector(LoginLocators.PASSWORD_FIELD)).sendKeys("654654654");
+//    WaitFor.WaitFori(driver, LoginLocators.NEXT);
+//    driver.findElement(By.cssSelector(LoginLocators.NEXT)).click();
+//}}

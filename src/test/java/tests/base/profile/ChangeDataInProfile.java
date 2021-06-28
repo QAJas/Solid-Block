@@ -1,5 +1,7 @@
 package tests.base.profile;
 
+import constants.HomePageLocators;
+import constants.LoginLocators;
 import constants.driver.ProfieLocators;
 import helpers.Generators;
 import helpers.WaitFor;
@@ -12,10 +14,18 @@ import tests.base.BaseTest;
 public class ChangeDataInProfile extends BaseTest {
 
 
-    @BeforeMethod
+//    @BeforeMethod
     @Test(groups = {"profile"})
     public void ChangeData(){
-        WaitFor.WaitFori(driver, ProfieLocators.USER_ICON_IN_HEADER);
+        driver.get(HomePageLocators.HOME_URL);
+        WaitFor.WaitFori(driver, HomePageLocators.LOGIN);
+        driver.findElement(By.cssSelector(HomePageLocators.LOGIN)).click();
+        WaitFor.WaitFori(driver, LoginLocators.EMAIL_FIELD);
+        driver.findElement(By.cssSelector(LoginLocators.EMAIL_FIELD)).sendKeys("tcohasmik+7@gmail.com");
+        driver.findElement(By.cssSelector(LoginLocators.PASSWORD_FIELD)).sendKeys("654654654");
+        WaitFor.WaitFori(driver, LoginLocators.NEXT);
+        driver.findElement(By.cssSelector(LoginLocators.NEXT)).click();
+  WaitFor.WaitFori(driver, ProfieLocators.USER_ICON_IN_HEADER);
         driver.findElement(By.cssSelector(ProfieLocators.USER_ICON_IN_HEADER)).click();
         driver.findElement(By.cssSelector(ProfieLocators.PROFILE_ON_HOVER)).click();
         WaitFor.WaitFori(driver,ProfieLocators.PROFILE_SAVE).isSelected();

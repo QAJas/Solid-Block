@@ -37,7 +37,7 @@ public class Generators {
     }
 
     public static String randomeNum() {
-        String generatedString = RandomStringUtils.randomNumeric(5);
+        String generatedString = RandomStringUtils.randomNumeric(10);
         return (generatedString);
     }
 
