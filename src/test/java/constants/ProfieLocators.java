@@ -16,5 +16,12 @@ public class ProfieLocators {
     public static final String DELETE_PHOTO = "button.MuiButtonBase-root.MuiButton-root.MuiButton-text.jss12.button-change-photo:nth-child(3) > span.MuiButton-label";
     public static final String CHANGE_PHOTO = "button:nth-child(1) > span.MuiButton-label";
     public static final String DELETE_USER = "button.MuiButtonBase-root.MuiButton-root.MuiButton-text.jss2.button-delete-profile > span.MuiButton-label";
-
+    public static final String SECURITY = "a.profile-nav__link:nth-child(2)";
+    public static final String NEW_PASS = "body > div#root:nth-child(3) > main > div.security-page:nth-child(3) > section.security-page-content:nth-child(4) > form.security-form:nth-child(2) > div.MuiFormControl-root:nth-child(2) > div.MuiInputBase-root.MuiInput-root.MuiInput-underline.form-field.MuiInputBase-formControl.MuiInput-formControl.MuiInputBase-adornedEnd:nth-child(2) > input#auth-password.MuiInputBase-input.MuiInput-input.MuiInputBase-inputAdornedEnd";
+    public static final String CONFIRM_PASS ="body > div#root:nth-child(3) > main > div.security-page:nth-child(3) > section.security-page-content:nth-child(4) > form.security-form:nth-child(2) > div.MuiFormControl-root:nth-child(3) > div.MuiInputBase-root.MuiInput-root.MuiInput-underline.form-field.MuiInputBase-formControl.MuiInput-formControl.MuiInputBase-adornedEnd:nth-child(2) > input#auth-password.MuiInputBase-input.MuiInput-input.MuiInputBase-inputAdornedEnd";
+    public static final String OLD_PASS = "body > div#root:nth-child(3) > main > div.security-page:nth-child(3) > section.security-page-content:nth-child(4) > form.security-form:nth-child(2) > div.security-input-container:nth-child(4) > div.MuiFormControl-root:nth-child(1) > div.MuiInputBase-root.MuiInput-root.MuiInput-underline.form-field.MuiInputBase-formControl.MuiInput-formControl.MuiInputBase-adornedEnd:nth-child(2) > input#auth-password.MuiInputBase-input.MuiInput-input.MuiInputBase-inputAdornedEnd";
+    public static final String SAVE_PASS_CHANGE = "button.security-button";
+    public static final String SUC_FOR_PASS = "body > div#root:nth-child(3) > main > div.security-page:nth-child(3) > section.security-page-content:nth-child(4) > span.input-success";
+public static final String PASS_1  = "654654654";
+public static final String PASS_2 = "321321321";
 }

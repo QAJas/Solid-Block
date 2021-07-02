@@ -21,7 +21,7 @@ public class MyDriver {
                 chromeOptions.addArguments("headless");
                 driver= new ChromeDriver(chromeOptions);
 
-                WebDriver driver = new ChromeDriver(chromeOptions);
+//                WebDriver driver = new ChromeDriver(chromeOptions);
 //               driver = new ChromeDriver();
 //
 //                ChromeOptions options = new ChromeOptions();

@@ -6,11 +6,13 @@ import constants.ProfieLocators;
 import helpers.Generators;
 import helpers.WaitFor;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 import base.BaseTest;
 
 public class ChangeDataInProfile extends BaseTest {
+
 
 
 //    @BeforeMethod
@@ -20,8 +22,8 @@ public class ChangeDataInProfile extends BaseTest {
         WaitFor.WaitFori(driver, HomePageLocators.LOGIN);
         driver.findElement(By.cssSelector(HomePageLocators.LOGIN)).click();
         WaitFor.WaitFori(driver, LoginLocators.EMAIL_FIELD);
-        driver.findElement(By.cssSelector(LoginLocators.EMAIL_FIELD)).sendKeys("tcohasmik+7@gmail.com");
-        driver.findElement(By.cssSelector(LoginLocators.PASSWORD_FIELD)).sendKeys("654654654");
+        driver.findElement(By.cssSelector(LoginLocators.EMAIL_FIELD)).sendKeys(LoginLocators.EMAIL_VALUE);
+        driver.findElement(By.cssSelector(LoginLocators.PASSWORD_FIELD)).sendKeys(LoginLocators.PASSWORD_VALUE);
         WaitFor.WaitFori(driver, LoginLocators.NEXT);
         driver.findElement(By.cssSelector(LoginLocators.NEXT)).click();
   WaitFor.WaitFori(driver, ProfieLocators.USER_ICON_IN_HEADER);
@@ -47,7 +49,7 @@ public class ChangeDataInProfile extends BaseTest {
         actions.moveToElement(driver.findElement(By.cssSelector(ProfieLocators.PROFILE_SAVE))).click();
 
 
+        }
 
     }
 
-}

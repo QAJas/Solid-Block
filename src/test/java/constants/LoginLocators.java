@@ -1,6 +1,8 @@
 package constants;
 
 public class LoginLocators {
+    public static final String EMAIL_VALUE = "tcohasmik+7@gmail.com";
+    public static final String PASSWORD_VALUE = "654654654";
     public static final String EMAIL_FIELD = "#auth-email";
     public static final String PASSWORD_FIELD = "#auth-password";
     public static final String NEXT = "button.MuiButtonBase-root.MuiButton-root.MuiButton-text.auth-next-button.desktop";
