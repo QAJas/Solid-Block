@@ -22,6 +22,7 @@ public class ProfieLocators {
     public static final String OLD_PASS = "body > div#root:nth-child(3) > main > div.security-page:nth-child(3) > section.security-page-content:nth-child(4) > form.security-form:nth-child(2) > div.security-input-container:nth-child(4) > div.MuiFormControl-root:nth-child(1) > div.MuiInputBase-root.MuiInput-root.MuiInput-underline.form-field.MuiInputBase-formControl.MuiInput-formControl.MuiInputBase-adornedEnd:nth-child(2) > input#auth-password.MuiInputBase-input.MuiInput-input.MuiInputBase-inputAdornedEnd";
     public static final String SAVE_PASS_CHANGE = "button.security-button";
     public static final String SUC_FOR_PASS = "body > div#root:nth-child(3) > main > div.security-page:nth-child(3) > section.security-page-content:nth-child(4) > span.input-success";
+    public static final String LDB = "div:nth-child(1) > div.image-container > img";
     public static final String PASS_1 = "654654654";
     public static final String PASS_2 = "321321321";
     public static final String LOGOUT = "div.collapse-header-item";

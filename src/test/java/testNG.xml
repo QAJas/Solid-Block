@@ -7,7 +7,8 @@
             <class name="base.signUp.SignUp"></class>
             <class name="base.login.Lg"></class>
             <class name="base.login.Header"></class>
-            <class name="base.profile.ChangePass"></class>
+            <class name="base.login.Lout"></class>
+            <class name="base.Buy.BuyShares"></class>
         </classes>
     </test>
 </suite>
