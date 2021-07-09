@@ -6,14 +6,10 @@ import constants.HomePageLocators;
 import constants.LoginLocators;
 import constants.ProfieLocators;
 import helpers.WaitFor;
-import org.checkerframework.checker.units.qual.A;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.FindBy;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class BuyShares extends BaseTest{
