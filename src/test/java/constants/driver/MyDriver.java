@@ -3,7 +3,6 @@ package constants.driver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
 
@@ -15,11 +14,11 @@ public class MyDriver {
             case "chrome":
 
                 WebDriverManager.chromedriver().setup();
-//                driver = new ChromeDriver();
-                ChromeOptions chromeOptions = new ChromeOptions();
-                chromeOptions.addArguments("window-size=1400,800");
-                chromeOptions.addArguments("headless");
-                driver= new ChromeDriver(chromeOptions);
+                driver = new ChromeDriver();
+//                ChromeOptions chromeOptions = new ChromeOptions();
+//                chromeOptions.addArguments("window-size=1400,800");
+//                chromeOptions.addArguments("headless");
+//                driver= new ChromeDriver(chromeOptions);
 
 //                WebDriver driver = new ChromeDriver(chromeOptions);
 //               driver = new ChromeDriver();

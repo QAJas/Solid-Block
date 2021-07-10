@@ -6,22 +6,26 @@ import constants.HomePageLocators;
 import constants.LoginLocators;
 import constants.ProfieLocators;
 import helpers.WaitFor;
+import org.checkerframework.checker.units.qual.A;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class BuyShares extends BaseTest{
 
 
     @Test
-    public void BuyWithCheck(){
+    public void Buy(){
         driver.get(HomePageLocators.HOME_URL);
         WaitFor.WaitFori(driver, HomePageLocators.LOGIN);
         driver.findElement(By.cssSelector(HomePageLocators.LOGIN)).click();
         WaitFor.WaitFori(driver, LoginLocators.EMAIL_FIELD);
-        driver.findElement(By.cssSelector(LoginLocators.EMAIL_FIELD)).sendKeys("tcohasmik@gmail.com");
+        driver.findElement(By.cssSelector(LoginLocators.EMAIL_FIELD)).sendKeys("tcohasmik+88@gmail.com");
         driver.findElement(By.cssSelector(LoginLocators.PASSWORD_FIELD)).sendKeys("654654654");
         driver.findElement(By.cssSelector(LoginLocators.NEXT)).click();
         Actions actions = new Actions(driver);
@@ -59,6 +63,7 @@ public class BuyShares extends BaseTest{
         jsM.executeScript("arguments[0].click();", elementM);
 
         driver.getCurrentUrl().equals("https://demo.solidblock.net/my-investments");
+
     }
 
     }

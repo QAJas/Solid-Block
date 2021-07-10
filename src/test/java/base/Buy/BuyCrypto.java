@@ -9,9 +9,9 @@ package base.Buy;
         import helpers.WaitFor;
         import org.openqa.selenium.By;
         import org.openqa.selenium.JavascriptExecutor;
+        import org.openqa.selenium.Keys;
         import org.openqa.selenium.WebElement;
         import org.openqa.selenium.interactions.Actions;
-        import org.testng.Assert;
         import org.testng.annotations.Test;
 
 public class BuyCrypto  extends BaseTest {
@@ -20,12 +20,12 @@ public class BuyCrypto  extends BaseTest {
 
 
     @Test
-    public void BuyWithCrypto(){
+    public void BuyWithCrypto() throws InterruptedException {
         driver.get(HomePageLocators.HOME_URL);
         WaitFor.WaitFori(driver, HomePageLocators.LOGIN);
         driver.findElement(By.cssSelector(HomePageLocators.LOGIN)).click();
         WaitFor.WaitFori(driver, LoginLocators.EMAIL_FIELD);
-        driver.findElement(By.cssSelector(LoginLocators.EMAIL_FIELD)).sendKeys("tcohasmik@gmail.com");
+        driver.findElement(By.cssSelector(LoginLocators.EMAIL_FIELD)).sendKeys("tcohasmik+88@gmail.com");
         driver.findElement(By.cssSelector(LoginLocators.PASSWORD_FIELD)).sendKeys("654654654");
         driver.findElement(By.cssSelector(LoginLocators.NEXT)).click();
         Actions actions = new Actions(driver);
@@ -51,13 +51,14 @@ public class BuyCrypto  extends BaseTest {
         WaitFor.WaitFori(driver, GetLocators.CHECKOUT_PAYMENT_CRYPTO).click();
         JavascriptExecutor jsP= (JavascriptExecutor) driver;
         jsP.executeScript("scroll(0, 250);");
-        WaitFor.WaitFori(driver, GetLocators.CONFIRM_FOR_CRYPTO).isSelected();
+        WaitFor.WaitFori(driver, GetLocators.CONFIRM_FOR_CRYPTO);
+        actions.moveToElement(driver.findElement(By.cssSelector(GetLocators.CONFIRM_FOR_CRYPTO))).sendKeys(Keys.ENTER);
+        actions.moveToElement(driver.findElement(By.cssSelector(GetLocators.CONFIRM_FOR_CRYPTO))).sendKeys(Keys.ENTER);
         WebElement elementP = driver.findElement(By.cssSelector(GetLocators.CHECKOUT_PAYMENT_CRYPTO));
-        JavascriptExecutor jsp= (JavascriptExecutor) driver;
+            JavascriptExecutor jsp= (JavascriptExecutor) driver;
         jsp.executeScript("arguments[0].click();", elementP);
-        actions.moveToElement(driver.findElement(By.cssSelector(GetLocators.CONFIRM_FOR_CRYPTO))).click().build();
-
-
+        Thread.sleep(2000);
+        driver.findElement(By.cssSelector(GetLocators.CONFIRM_FOR_CRYPTO)).sendKeys(Keys.ENTER);
 
 
 
