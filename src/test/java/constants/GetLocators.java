@@ -13,5 +13,7 @@ public class GetLocators {
     public static final String INVEST_IMAGE = "img.my-asset-img";
     public static final String CHECKOUT_PAYMENT_WIRE = "#ach";
     public static final String CONFIRM_WIRE = "button.MuiButtonBase-root.MuiButton-root.MuiButton-text";
+    public static final String CHECKOUT_AMOUNT ="input.MuiInputBase-input.MuiInput-input.MuiInputBase-inputAdornedEnd";
+    public static final String DISCOUNT = "#filled-adornment-password";
 
 }

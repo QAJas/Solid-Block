@@ -7,7 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 
 public class DBclick {
 
-    private WebDriver driver;
+    public WebDriver driver;
 
     public  void Double() {
         Actions actions = new Actions(driver);
