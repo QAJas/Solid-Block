@@ -40,6 +40,7 @@ public class BuyCrypto  extends BaseTest {
         WebElement elementB = driver.findElement(By.cssSelector(GetLocators.BUY_BUTTON));
         JavascriptExecutor jsB= (JavascriptExecutor) driver;
         jsB.executeScript("arguments[0].click();", elementB);
+        Thread.sleep(2000);
 
         WaitFor.WaitFori(driver, GetLocators.CHECKOUT_CONFIRM).isSelected();
         actions.moveToElement(driver.findElement(By.cssSelector(GetLocators.CHECKOUT_CONFIRM)));
@@ -51,6 +52,8 @@ public class BuyCrypto  extends BaseTest {
         WaitFor.WaitFori(driver, GetLocators.CHECKOUT_PAYMENT_CRYPTO).click();
         JavascriptExecutor jsP= (JavascriptExecutor) driver;
         jsP.executeScript("scroll(0, 250);");
+        Thread.sleep(2000);
+
         WaitFor.WaitFori(driver, GetLocators.CONFIRM_FOR_CRYPTO);
         actions.moveToElement(driver.findElement(By.cssSelector(GetLocators.CONFIRM_FOR_CRYPTO))).sendKeys(Keys.ENTER);
         actions.moveToElement(driver.findElement(By.cssSelector(GetLocators.CONFIRM_FOR_CRYPTO))).sendKeys(Keys.ENTER);
