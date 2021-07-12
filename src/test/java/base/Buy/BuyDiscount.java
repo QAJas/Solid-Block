@@ -39,7 +39,7 @@ public class BuyDiscount extends BaseTest {
         jsB.executeScript("arguments[0].click();", elementB);
         Thread.sleep(2000);
 
-        driver.findElement(By.cssSelector(GetLocators.CHECKOUT_AMOUNT)).sendKeys("00");
+        driver.findElement(By.cssSelector(GetLocators.CHECKOUT_AMOUNT)).sendKeys("22");
         driver.findElement(By.cssSelector(GetLocators.CHECKOUT_AMOUNT));
         driver.findElement(By.cssSelector("div.card-1 > div > div.exclamation-line")).click();
         driver.findElement(By.cssSelector(GetLocators.DISCOUNT)).sendKeys("qa");

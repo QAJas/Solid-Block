@@ -9,6 +9,9 @@
             <class name="base.login.Header"></class>
             <class name="base.login.Lout"></class>
             <class name="base.Buy.BuyShares"></class>
+            <class name="base.Buy.BuyCrypto"></class>
+            <class name="base.Buy.BuyWire"></class>
+            <class name="base.Buy.BuyDiscount"></class>
         </classes>
     </test>
 </suite>
