@@ -2,8 +2,8 @@ package constants;
 
 public  class HomePageLocators {
     public static final String HOME_URL = "https://demo.solidblock.net/";
-    public static final String LOGIN = "button:nth-child(1) > span.MuiButton-label";
-    public static final String GET_STARTED = "button.MuiButtonBase-root.MuiButton-root.MuiButton-text.get-started-button > span.MuiButton-label";
+    public static final String LOGIN = "#root > main > div > header > div.container > nav > div > button.MuiButtonBase-root.MuiButton-root.MuiButton-text.login-button > span.MuiButton-label";
+    public static final String GET_STARTED = "#root > main > div > header > div.container > nav > div > button.MuiButtonBase-root.MuiButton-root.MuiButton-text.get-started-button > span.MuiButton-label";
     public static final String ABOUT_HEADER = "div.landing-header-desktop-links > a:nth-child(1)";
     public static final String TEAM_HEADER = "div.landing-header-desktop-links > a:nth-child(2)";
     public static final String TEAM_URL = "https://demo.solidblock.net/#team";
