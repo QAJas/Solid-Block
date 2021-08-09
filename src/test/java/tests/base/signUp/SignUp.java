@@ -2,6 +2,7 @@ package tests.base.signUp;
 
 import constants.HomePageLocators;
 import constants.LoginLocators;
+import constants.NewHomeLoc;
 import constants.driver.MyDriver;
 import helpers.Generators;
 import helpers.WaitFor;
@@ -24,14 +25,11 @@ public class SignUp extends BaseTest {
         driver.findElement(By.cssSelector(LoginLocators.COUNTRY)).click();
         WaitFor.WaitFori(driver, LoginLocators.USA);
         driver.findElement(By.cssSelector(LoginLocators.USA)).click();
-//        WebElement el = driver.findElement(By.cssSelector(LoginLocators.USA));
-//        Actions builder = new Actions(driver);
-//        builder.doubleClick(el).perform();
         WaitFor.WaitFori(driver, LoginLocators.PHONE).sendKeys(Generators.phonenumer());
         WaitFor.WaitFori(driver, LoginLocators.CONFIRM);
         driver.findElement(By.cssSelector(LoginLocators.CONFIRM)).click();
         WaitFor.WaitFori(driver, LoginLocators.NEXT_FINISH).click();
-        driver.findElement(By.cssSelector(LoginLocators.EXIT));
+        driver.findElement(By.cssSelector(LoginLocators.EXIT)).click();
 
 
     }
@@ -39,8 +37,8 @@ public class SignUp extends BaseTest {
     @Test(groups = {"sign up"})
     public void invalidEmail() {
         driver.get(HomePageLocators.HOME_URL);
-        WaitFor.WaitFori(driver, HomePageLocators.GET_STARTED).click();
-        WaitFor.WaitFori(driver, LoginLocators.EMAIL_FIELD).sendKeys("kms");
+       driver.findElement(By.cssSelector( HomePageLocators.GET_STARTED)).click();
+        driver.findElement(By.cssSelector( LoginLocators.EMAIL_FIELD)).sendKeys("kms");
         driver.findElement(By.cssSelector(LoginLocators.PASSWORD_FIELD)).sendKeys(Generators.randomeNum());
         driver.findElement(By.cssSelector(LoginLocators.NEXT)).isEnabled();
 
@@ -57,18 +55,13 @@ public class SignUp extends BaseTest {
     }
 
     @Test(groups = {"sign up"})
-    public void emaptyName() {
+    public void emptyName() {
         driver.get(HomePageLocators.HOME_URL);
         WaitFor.WaitFori(driver, HomePageLocators.GET_STARTED).click();
         WaitFor.WaitFori(driver, LoginLocators.EMAIL_FIELD).sendKeys(Generators.generateMail());
         driver.findElement(By.cssSelector(LoginLocators.PASSWORD_FIELD)).sendKeys(Generators.randomeNum());
-        driver.findElement(By.cssSelector(LoginLocators.NEXT)).click();
-        driver.findElement(By.cssSelector(LoginLocators.LASTNAME)).sendKeys(Generators.getUniqueId());
-        driver.findElement(By.cssSelector(LoginLocators.COUNTRY)).click();
-        WaitFor.WaitFori(driver, LoginLocators.USA);
-        driver.findElement(By.cssSelector(LoginLocators.USA)).click();
-        WaitFor.WaitFori(driver, LoginLocators.PHONE).sendKeys(Generators.phonenumer());
-        driver.findElement(By.cssSelector(LoginLocators.CONFIRM)).isEnabled();
+        driver.findElement(By.cssSelector(LoginLocators.NEXT)).isEnabled();
+
 
 
     }
@@ -79,12 +72,14 @@ public class SignUp extends BaseTest {
         WaitFor.WaitFori(driver, HomePageLocators.GET_STARTED).click();
         WaitFor.WaitFori(driver, LoginLocators.EMAIL_FIELD).sendKeys(Generators.generateMail());
         driver.findElement(By.cssSelector(LoginLocators.PASSWORD_FIELD)).sendKeys(Generators.randomeNum());
+        WaitFor.WaitFori(driver, LoginLocators.NEXT).isSelected();
         driver.findElement(By.cssSelector(LoginLocators.NEXT)).click();
-        driver.findElement(By.cssSelector(LoginLocators.FIRSTNAME)).sendKeys(Generators.getUniqueId());
+        WaitFor.WaitFori(driver, LoginLocators.FIRSTNAME).sendKeys(Generators.getUniqueId());
         driver.findElement(By.cssSelector(LoginLocators.COUNTRY)).click();
         WaitFor.WaitFori(driver, LoginLocators.USA);
         driver.findElement(By.cssSelector(LoginLocators.USA)).click();
         WaitFor.WaitFori(driver, LoginLocators.PHONE).sendKeys(Generators.phonenumer());
+        WaitFor.WaitFori(driver, LoginLocators.CONFIRM);
         driver.findElement(By.cssSelector(LoginLocators.CONFIRM)).isEnabled();
 
     }

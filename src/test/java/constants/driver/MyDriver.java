@@ -14,10 +14,11 @@ public class MyDriver {
         switch (browser) {
             case "chrome":
                 WebDriverManager.chromedriver().setup();
-               // driver = new ChromeDriver();
-                ChromeOptions options = new ChromeOptions();
-                options.addArguments("--headless");
-                driver = new ChromeDriver(options);
+//                driver = new ChromeDriver();
+                ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments("window-size=1400,800");
+                chromeOptions.addArguments("headless");
+                driver= new ChromeDriver(chromeOptions);
 
 
                 break;

@@ -1,13 +1,14 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
 <suite name="Suite1" verbose="1" >
-    <test name="Regression1"   >
-        <classes>
-            <class name="tests.base.profile.ChangeDataInProfile"></class>
-            <class name="tests.base.signUp.SignUp"></class>
-            <class name="tests.base.login.Lg"></class>
-            <class name="tests.base.login.Footer"></class>
-            <class name="tests.base.login.Header"></class>
-        </classes>
+    <test name="1"   >
+        <packages>
+            <package name="pages.NewHome"></package>
+            <package name="tests.base"></package>
+            <package name="tests.base.login"></package>
+            <package name="tests.base.profile"></package>
+            <package name="tests.base.signUp"></package>
+            <package name="tests.base.Buy"></package>
+        </packages>
     </test>
 </suite>

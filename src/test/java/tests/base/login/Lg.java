@@ -25,9 +25,7 @@ public class Lg extends BaseTest {
     @Test(groups = {"login"})
     public void empty() {
         driver.get(HomePageLocators.HOME_URL);
-        WaitFor.WaitFori(driver, HomePageLocators.LOGIN);
         driver.findElement(By.cssSelector(HomePageLocators.LOGIN)).click();
-        WaitFor.WaitFori(driver, LoginLocators.EMAIL_FIELD).click();
         driver.findElement(By.cssSelector(LoginLocators.PASSWORD_FIELD)).click();
         WaitFor.WaitFori(driver, LoginLocators.NEXT).isEnabled();
     }
@@ -35,20 +33,17 @@ public class Lg extends BaseTest {
     @Test(groups = {"login"})
     public void lwid() {
         driver.get(HomePageLocators.HOME_URL);
-        WebElement loga = WaitFor.WaitFori(driver, HomePageLocators.LOGIN);
+//        WebElement loga = WaitFor.WaitFori(driver, HomePageLocators.LOGIN);
         driver.findElement(By.cssSelector(HomePageLocators.LOGIN)).click();
-        WebElement z = WaitFor.WaitFori(driver, LoginLocators.EMAIL_FIELD);
+        //WebElement z = WaitFor.WaitFori(driver, LoginLocators.EMAIL_FIELD);
 
         driver.findElement(By.cssSelector(LoginLocators.EMAIL_FIELD)).sendKeys("tc@gmail.com");
 
 
-        WebElement passField = driver.findElement(By.cssSelector(LoginLocators.PASSWORD_FIELD));
-        passField.click();
-        passField.sendKeys("654654654");
-        WebElement next = driver.findElement(By.cssSelector(LoginLocators.NEXT));
-        next.click();
+        driver.findElement(By.cssSelector(LoginLocators.PASSWORD_FIELD)).sendKeys("654654654");
+        driver.findElement(By.cssSelector(LoginLocators.NEXT)).click();
 
-        WebElement wm = WaitFor.WaitFori(driver, LoginLocators.WARNING_MESSAGE);
+       WaitFor.WaitFori(driver, LoginLocators.WARNING_MESSAGE).isDisplayed();
 
     }
 }

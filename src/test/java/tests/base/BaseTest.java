@@ -14,13 +14,13 @@ public class BaseTest {
     public static WebDriver driver;
 
 
-    @BeforeClass(alwaysRun = true)
+    @BeforeMethod(alwaysRun = true)
     public static void max() {
         driver.manage().window().maximize();
     }
 
 
-    @BeforeClass(alwaysRun = true)
+    @BeforeMethod(alwaysRun = true)
 //   @Parameters({"browser"})
     public static void createDriver() {
         driver = MyDriver.createDriver("chrome");
@@ -28,7 +28,7 @@ public class BaseTest {
 
     }
 
-    @AfterClass(alwaysRun = true)
+    @AfterMethod(alwaysRun = true)
     public static void driverQuit() {
         driver.quit();
     }
