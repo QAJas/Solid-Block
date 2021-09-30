@@ -7,7 +7,7 @@
             <package name="tests.base"></package>
             <package name="tests.base.login"></package>
             <package name="tests.base.profile"></package>
-            <package name="tests.base.signUp"></package>
+<!--            <package name="tests.base.signUp"></package>-->
             <package name="tests.base.Buy"></package>
         </packages>
     </test>
