@@ -1,7 +1,7 @@
 package helpers;
 //import com.github.javafaker.Faker;
 
-import constants.LoginLocators;
+import constants.LogLocators;
 import org.apache.commons.lang3.RandomStringUtils;
 
 import org.openqa.selenium.By;

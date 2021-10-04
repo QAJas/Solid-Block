@@ -1,6 +1,9 @@
 package constants;
 
-public class Frog {
+public class Frogi {
+    public static final String FROG = "#root > main > div > section.landing-cards > div > div.slider-container > div > div > div:nth-child(6) > div.card-content";
+    public static final String FROG_BLOCK = ":nth-child(6) .card-content";
+    public static final String BUY_DIGITAL_SHARES = "#root > main > div.redfrog-page > div.asset-top > div > div > div.asset-info-main > div.right > div > div > div.buy";
     public static final String FROG_LINK = "https://demo.solidblock.net/asset-view/6e8f35ef-6de9-4814-bab1-8355d118631e";
     public static final String YOUTUBE = ".asset-image iframe";
     public static final String BUY_ONE_SCREEN = ".buy";

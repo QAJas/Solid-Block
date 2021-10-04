@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
 
-public class MyDriver {
+public class MyDriveri {
     private static WebDriver driver;
 
     public static WebDriver createDriver(String browser) {

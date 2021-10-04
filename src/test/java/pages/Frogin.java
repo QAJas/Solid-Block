@@ -1,6 +1,6 @@
 package pages;
 
-import constants.Frog;
+import constants.Frogi;
 import constants.NewHomeLoc;
 import helpers.WaitFor;
 import org.openqa.selenium.By;
@@ -10,11 +10,11 @@ import org.testng.annotations.Test;
 import tests.base.BaseTest;
 
 
-public class Frogi extends BaseTest {
+public class Frogin extends BaseTest {
     @Test (description = "shows element ")
     public void Element (){
-        driver.get(Frog.FROG_LINK);
-        driver.findElement(By.cssSelector(Frog.YOUTUBE)).isDisplayed();
-        driver.findElement(By.cssSelector(Frog.BUY_ONE_SCREEN)).isDisplayed();
+        driver.get(constants.Frogi.FROG_LINK);
+        driver.findElement(By.cssSelector(constants.Frogi.YOUTUBE)).isDisplayed();
+        driver.findElement(By.cssSelector(constants.Frogi.BUY_ONE_SCREEN)).isDisplayed();
     }
 }

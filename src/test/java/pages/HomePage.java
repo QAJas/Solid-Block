@@ -2,7 +2,7 @@ package pages;
 
 
 import constants.HomePageLocators;
-import constants.driver.MyDriver;
+import constants.driver.MyDriveri;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,11 +11,11 @@ import org.openqa.selenium.support.FindBy;
 
 public class HomePage {
         public HomePage() {
-                MyDriver.getDriver().get(HomePageLocators.HOME_URL);
+                MyDriveri.getDriver().get(HomePageLocators.HOME_URL);
         }
 
         public WebElement log() {
-                WebElement log = MyDriver.getDriver().findElement(
+                WebElement log = MyDriveri.getDriver().findElement(
                         By.cssSelector(HomePageLocators.LOGIN));
                 return log;
         }

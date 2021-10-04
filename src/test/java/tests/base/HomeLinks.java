@@ -1,7 +1,7 @@
 package tests.base;
 
 import constants.HomePageLocators;
-import constants.LoginLocators;
+import constants.LogLocators;
 import constants.NewHomeLoc;
 import helpers.WaitFor;
 import org.checkerframework.checker.units.qual.A;

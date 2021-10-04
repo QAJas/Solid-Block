@@ -1,7 +1,7 @@
 package pages.NewHome;
 
 import constants.HomePageLocators;
-import constants.LoginLocators;
+import constants.LogLocators;
 import constants.NewHomeLoc;
 import helpers.WaitFor;
 import org.openqa.selenium.By;
@@ -27,9 +27,9 @@ public class Header extends BaseTest {
     public void ExploreLoginUser (){
         driver.get(NewHomeLoc.HOME);
         driver.findElement(By.cssSelector(HomePageLocators.LOGIN)).click();
-        driver.findElement(By.cssSelector(LoginLocators.EMAIL_FIELD)).sendKeys("tcohasmik@gmail.com");
-        driver.findElement(By.cssSelector(LoginLocators.PASSWORD_FIELD)).sendKeys("654654654");
-        driver.findElement(By.cssSelector(LoginLocators.NEXT)).click();
+        driver.findElement(By.cssSelector(LogLocators.EMAIL_FIELD)).sendKeys("tcohasmik@gmail.com");
+        driver.findElement(By.cssSelector(LogLocators.PASSWORD_FIELD)).sendKeys("654654654");
+        driver.findElement(By.cssSelector(LogLocators.NEXT)).click();
         driver.getCurrentUrl().equals(NewHomeLoc.MARKETPLACE);
     }
 
