@@ -13,7 +13,7 @@ public class NewHomeLoc {
     public static final String BLOG_LINK = "https://blog.solidblock.co/";
     public static final String PODCAST = "#customized-menu > div.MuiPaper-root.MuiMenu-paper.jss1.MuiPopover-paper.MuiPaper-elevation0.MuiPaper-rounded > ul > li:nth-child(4)";
     public static final String POdCAST_LINK = "https://blog.solidblock.co/category/podcast/";
-    public static final String ABOUT = "#customized-menu > div.MuiPaper-root.MuiMenu-paper.jss1.MuiPopover-paper.MuiPaper-elevation0.MuiPaper-rounded > ul > li:nth-child(5) > div > span";
+    public static final String ABOUT = ":nth-child(4) .MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypography-displayBlock";
     public static final String ABOUT_LINK = "https://solidblock.co/about";
     public static final String LOGO = "#root > main > div > header > div.container > a > img.logo-main";
     public static final String EXPLORE_MARKETPLACE = "#root > main > div > header > div.container > nav > a:nth-child(2)";
