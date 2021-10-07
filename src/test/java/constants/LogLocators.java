@@ -1,6 +1,6 @@
 package constants;
 
-public class LoginLocators {
+public class LogLocators {
     public static final String EMAIL_FIELD = "#auth-email";
     public static final String PASSWORD_FIELD = "#auth-password";
     public static final String NEXT = "button.MuiButtonBase-root.MuiButton-root.MuiButton-text.auth-next-button.desktop";
