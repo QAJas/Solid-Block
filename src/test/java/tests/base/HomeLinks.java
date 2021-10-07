@@ -1,9 +1,10 @@
-package tests.base.Home;
+package tests.base;
 
 import constants.HomePageLocators;
-import constants.LoginLocators;
+import constants.LogLocators;
 import constants.NewHomeLoc;
 import helpers.WaitFor;
+import org.checkerframework.checker.units.qual.A;
 import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
@@ -11,79 +12,44 @@ import org.testng.annotations.Test;
 import tests.base.BaseTest;
 
 public class HomeLinks extends BaseTest {
-    @Test (description = "home links ")
-    public void HomeLinks (){
-    driver.get(HomePageLocators.HOME_URL);
-    driver.findElement(By.cssSelector(constants.HomeLinks.LEARN)).click();
-    driver.getCurrentUrl().equals(constants.HomeLinks.LEARN_LINKS);
-    }
-    @Test (description = "home links ")
-    public void Email (){
+    @Test(description = "tok 101 ")
+    public void HomeLinks() {
         driver.get(HomePageLocators.HOME_URL);
-        driver.findElement(By.cssSelector(constants.HomeLinks.EMAIL_INPUT)).sendKeys("test@gmail.com");
-        driver.findElement(By.cssSelector(constants.HomeLinks.MARK_BUTTON)).click();
-        driver.getCurrentUrl().equals("https://demo.solidblock.net/sign-up/auth?email=test@gmail.com&invest=true");
-    }
-    @Test
-    public void LoginEmail (){
-        driver.get(HomePageLocators.HOME_URL);
-        WaitFor.WaitFori(driver, HomePageLocators.LOGIN);
-        driver.findElement(By.cssSelector(HomePageLocators.LOGIN)).click();
-        WaitFor.WaitFori(driver, LoginLocators.EMAIL_FIELD);
-        driver.findElement(By.cssSelector(LoginLocators.EMAIL_FIELD)).sendKeys("tcohasmik+1@gmail.com");
-        driver.findElement(By.cssSelector(LoginLocators.PASSWORD_FIELD)).sendKeys("654654654");
-        driver.findElement(By.cssSelector(LoginLocators.NEXT)).click();
-        driver.get(HomePageLocators.HOME_URL);
-        driver.findElement(By.cssSelector("#root > main > div > section.hero > div.main > div > div > div.form.aos-init.aos-animate > span")).click();
-        driver.getCurrentUrl().equals("https://demo.solidblock.net/marketplace");
-    }
-    @Test
-    public void Tok(){
-        driver.get(HomePageLocators.HOME_URL);
-        driver.findElement(By.cssSelector(constants.HomeLinks.TOK_LINK)).click();
-        driver.getCurrentUrl().equals(constants.HomeLinks.TOK_LINK_URL);
-    }
-    @Test
-    public void First (){
-        driver.get(HomePageLocators.HOME_URL);
+        driver.findElement(By.cssSelector(NewHomeLoc.LEARN)).click();
         Actions actions = new Actions(driver);
-        actions.moveToElement(driver.findElement(By.cssSelector(constants.HomeLinks.FIRST_EXPLORE))).click();
-        driver.getCurrentUrl().equals(constants.HomeLinks.FIRST_LINK);
+        actions.moveToElement(driver.findElement(By.cssSelector(NewHomeLoc.TOK_DROPDOWN))).click();
+        driver.getCurrentUrl().equals(NewHomeLoc.TOK_LINK);
     }
-    @Test
-    public void Second (){
+    @Test (description = "tok course")
+    public void TokLinks (){
         driver.get(HomePageLocators.HOME_URL);
+        driver.findElement(By.cssSelector(NewHomeLoc.LEARN)).click();
         Actions actions = new Actions(driver);
-        actions.moveToElement(driver.findElement(By.cssSelector(constants.HomeLinks.SECOND_EXPLORE))).click();
-        driver.getCurrentUrl().equals(constants.HomeLinks.SECOND_EXPLORE);
+        actions.moveToElement(driver.findElement(By.cssSelector(NewHomeLoc.TOK_COURSE))).click();
+        driver.getCurrentUrl().equals(NewHomeLoc.TOC_COURSE_LINK);
     }
-    @Test
-    public void Third (){
+    @Test (description = "Blog ")
+    public void BlogLink (){
         driver.get(HomePageLocators.HOME_URL);
+        driver.findElement(By.cssSelector(NewHomeLoc.LEARN)).click();
         Actions actions = new Actions(driver);
-        actions.moveToElement(driver.findElement(By.cssSelector(constants.HomeLinks.THIRD_EXPLORE))).click();
-        driver.getCurrentUrl().equals(constants.HomeLinks.THIRD_LINK);
+        actions.moveToElement(driver.findElement(By.cssSelector(NewHomeLoc.BLOG_DROP))).click();
+        driver.getCurrentUrl().equals(NewHomeLoc.BLOG_LINK);
     }
-    @Test
-    public void SeeAll(){
+    @Test (description = "podcast")
+    public void PodLink (){
         driver.get(HomePageLocators.HOME_URL);
-        WaitFor.WaitFori(driver, HomePageLocators.LOGIN);
-        driver.findElement(By.cssSelector(HomePageLocators.LOGIN)).click();
-        WaitFor.WaitFori(driver, LoginLocators.EMAIL_FIELD);
-        driver.findElement(By.cssSelector(LoginLocators.EMAIL_FIELD)).sendKeys("tcohasmik+1@gmail.com");
-        driver.findElement(By.cssSelector(LoginLocators.PASSWORD_FIELD)).sendKeys("654654654");
-        driver.findElement(By.cssSelector(LoginLocators.NEXT)).click();
-        driver.get(HomePageLocators.HOME_URL);
+        driver.findElement(By.cssSelector(NewHomeLoc.LEARN)).click();
         Actions actions = new Actions(driver);
-        actions.moveToElement(driver.findElement(By.cssSelector(constants.HomeLinks.SEE_ALL))).click();
-        driver.getCurrentUrl().equals(constants.HomeLinks.SEE_ALL_LINK_LOGIN);
+        actions.moveToElement(driver.findElement(By.cssSelector(NewHomeLoc.PODCAST))).click();
+        driver.getCurrentUrl().equals(NewHomeLoc.POdCAST_LINK);
     }
-    @Test
-    public void SeeAllOutLogin () {
-        driver.get(HomePageLocators.HOME_URL);
+    @Test (description = "about")
+    public void AboutLink (){
+        driver.get(NewHomeLoc.HOME);
+        driver.findElement(By.cssSelector(NewHomeLoc.LEARN)).click();
         Actions actions = new Actions(driver);
-        actions.moveToElement(driver.findElement(By.cssSelector(constants.HomeLinks.SEE_ALL))).click();
-        driver.getCurrentUrl().equals(constants.HomeLinks.SEE_ALL_LINK_OUTLINK);
-
+        actions.moveToElement(driver.findElement(By.cssSelector(NewHomeLoc.ABOUT))).click();
+        driver.getCurrentUrl().equals(NewHomeLoc.ABOUT_LINK);
     }
 }
