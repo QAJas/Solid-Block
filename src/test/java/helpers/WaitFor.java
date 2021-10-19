@@ -48,8 +48,5 @@ public class WaitFor {
 
 
     }
-
-    public static void WaitFori(WebElement element) {
-    }
 }
 

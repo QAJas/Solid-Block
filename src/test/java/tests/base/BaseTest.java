@@ -1,9 +1,14 @@
 package tests.base;
 
-import constants.driver.MyDriveri;
+import constants.HomePageLocators;
+import constants.LoginLocators;
+import constants.driver.MyDriver;
+import helpers.WaitFor;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.*;
 
 public class BaseTest {
     public static WebDriver driver;
@@ -18,7 +23,7 @@ public class BaseTest {
     @BeforeMethod(alwaysRun = true)
 //   @Parameters({"browser"})
     public static void createDriver() {
-        driver = MyDriveri.createDriver("chrome");
+        driver = MyDriver.createDriver("chrome");
 
 
     }

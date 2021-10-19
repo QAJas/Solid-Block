@@ -1,8 +1,8 @@
 package tests.base.login;
 
 import constants.HomePageLocators;
-import constants.LogLocators;
-import constants.driver.MyDriveri;
+import constants.LoginLocators;
+import constants.driver.MyDriver;
 import helpers.WaitFor;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -16,18 +16,18 @@ public class Lg extends BaseTest {
         driver.get(HomePageLocators.HOME_URL);
         WaitFor.WaitFori(driver, HomePageLocators.LOGIN);
         driver.findElement(By.cssSelector(HomePageLocators.LOGIN)).click();
-        WaitFor.WaitFori(driver, LogLocators.EMAIL_FIELD);
-        driver.findElement(By.cssSelector(LogLocators.EMAIL_FIELD)).sendKeys("tcohasmik+1@gmail.com");
-        driver.findElement(By.cssSelector(LogLocators.PASSWORD_FIELD)).sendKeys("654654654");
-        driver.findElement(By.cssSelector(LogLocators.NEXT)).click();
+        WaitFor.WaitFori(driver, LoginLocators.EMAIL_FIELD);
+        driver.findElement(By.cssSelector(LoginLocators.EMAIL_FIELD)).sendKeys("tcohasmik+1@gmail.com");
+        driver.findElement(By.cssSelector(LoginLocators.PASSWORD_FIELD)).sendKeys("654654654");
+        driver.findElement(By.cssSelector(LoginLocators.NEXT)).click();
     }
 
     @Test(groups = {"login"})
     public void empty() {
         driver.get(HomePageLocators.HOME_URL);
         driver.findElement(By.cssSelector(HomePageLocators.LOGIN)).click();
-        driver.findElement(By.cssSelector(LogLocators.PASSWORD_FIELD)).click();
-        WaitFor.WaitFori(driver, LogLocators.NEXT).isEnabled();
+        driver.findElement(By.cssSelector(LoginLocators.PASSWORD_FIELD)).click();
+        WaitFor.WaitFori(driver, LoginLocators.NEXT).isEnabled();
     }
 
     @Test(groups = {"login"})
@@ -37,13 +37,13 @@ public class Lg extends BaseTest {
         driver.findElement(By.cssSelector(HomePageLocators.LOGIN)).click();
         //WebElement z = WaitFor.WaitFori(driver, LoginLocators.EMAIL_FIELD);
 
-        driver.findElement(By.cssSelector(LogLocators.EMAIL_FIELD)).sendKeys("tc@gmail.com");
+        driver.findElement(By.cssSelector(LoginLocators.EMAIL_FIELD)).sendKeys("tc@gmail.com");
 
 
-        driver.findElement(By.cssSelector(LogLocators.PASSWORD_FIELD)).sendKeys("654654654");
-        driver.findElement(By.cssSelector(LogLocators.NEXT)).click();
+        driver.findElement(By.cssSelector(LoginLocators.PASSWORD_FIELD)).sendKeys("654654654");
+        driver.findElement(By.cssSelector(LoginLocators.NEXT)).click();
 
-       WaitFor.WaitFori(driver, LogLocators.WARNING_MESSAGE).isDisplayed();
+       WaitFor.WaitFori(driver, LoginLocators.WARNING_MESSAGE).isDisplayed();
 
     }
 }
