@@ -3,7 +3,7 @@ package constants;
 
 
 public class NewHomeLoc {
-    public static final String HOME = "https://demo.solidblock.net/";
+    public static final String HOME = "https://sb-demo.solidblock.net/home/";
     public static final String LEARN = "#root > main > div > header > div.container > nav > span > span";
     public static final String TOK_DROPDOWN = ":nth-child(1) > div > .MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypography-displayBlock";
     public static final String TOK_LINK = "https://solidblock.co/tokenization";

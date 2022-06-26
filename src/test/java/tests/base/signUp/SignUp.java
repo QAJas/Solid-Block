@@ -37,7 +37,7 @@ public class SignUp extends BaseTest {
     @Test(groups = {"sign up"})
     public void invalidEmail() {
         driver.get(HomePageLocators.HOME_URL);
-       driver.findElement(By.cssSelector( HomePageLocators.GET_STARTED)).click();
+       driver.findElement(By.cssSelector( HomePageLocators.SIGNUP)).click();
         driver.findElement(By.cssSelector( LogLocators.EMAIL_FIELD)).sendKeys("kms");
         driver.findElement(By.cssSelector(LogLocators.PASSWORD_FIELD)).sendKeys(Generators.randomeNum());
         driver.findElement(By.cssSelector(LogLocators.NEXT)).isEnabled();
@@ -47,7 +47,7 @@ public class SignUp extends BaseTest {
     @Test(groups = {"sign up"})
     public void invalidPass() {
         driver.get(HomePageLocators.HOME_URL);
-        WaitFor.WaitFori(driver, HomePageLocators.GET_STARTED).click();
+        WaitFor.WaitFori(driver, HomePageLocators.SIGNUP).click();
         WaitFor.WaitFori(driver, LogLocators.EMAIL_FIELD).sendKeys(Generators.generateMail());
         driver.findElement(By.cssSelector(LogLocators.PASSWORD_FIELD)).sendKeys("1");
         driver.findElement(By.cssSelector(LogLocators.NEXT)).isEnabled();
@@ -57,7 +57,7 @@ public class SignUp extends BaseTest {
     @Test(groups = {"sign up"})
     public void emptyName() {
         driver.get(HomePageLocators.HOME_URL);
-        WaitFor.WaitFori(driver, HomePageLocators.GET_STARTED).click();
+        WaitFor.WaitFori(driver, HomePageLocators.SIGNUP).click();
         WaitFor.WaitFori(driver, LogLocators.EMAIL_FIELD).sendKeys(Generators.generateMail());
         driver.findElement(By.cssSelector(LogLocators.PASSWORD_FIELD)).sendKeys(Generators.randomeNum());
         driver.findElement(By.cssSelector(LogLocators.NEXT)).isEnabled();

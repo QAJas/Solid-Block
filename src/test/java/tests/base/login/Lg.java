@@ -10,6 +10,15 @@ import org.testng.annotations.Test;
 import tests.base.BaseTest;
 
 public class Lg extends BaseTest {
+
+
+
+
+
+
+
+
+
     @Test(groups = {"login"})
 
     public void loginWithValidData() {
