@@ -1,6 +1,6 @@
 package constants.driver;
 
-public class ProfieLocators {
+public class ProfileLocators {
     public static final String USER_ICON_IN_HEADER = "div.logout-icon-container";
     public static final String PROFILE_ON_HOVER = "div.collapse-header-item:nth-child(1)";
     public static final String PROFILE_NAME = "#firstName";

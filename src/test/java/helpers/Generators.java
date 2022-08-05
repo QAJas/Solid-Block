@@ -28,7 +28,7 @@ public class Generators {
     }
 
     public static String generateMail() {
-        return String.format("sb.qa.test21+" + Num() + "@gmail.com");
+        return String.format("sb.tatev" + Num() + "@gmail.com");
     }
 
     public static String phonenumer() {
