@@ -16,7 +16,7 @@
 //
 ////    @BeforeMethod
 //    @Test(groups = {"profile"})
-//    public void ChangeData(){
+//    public void ChangeDaata(){
 //        driver.get(HomePageLocators.HOME_URL);
 //        WaitFor.WaitFori(driver, HomePageLocators.LOGIN);
 //        driver.findElement(By.cssSelector(HomePageLocators.LOGIN)).click();
